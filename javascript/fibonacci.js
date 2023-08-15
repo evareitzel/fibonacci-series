@@ -1,6 +1,21 @@
 function fibonacci(num) {
-  // type your code here
+  let arr = [0, 1]
+
+  for (let i = 2; i <= num; i++) {
+    arr.push(arr[i-1] + arr[i-2])
+  }
+
+  return arr[num]
 }
+
+// Eva's pseudocode/explanation
+  // Find the nth element
+    // starts with 0, 1
+    // 0, 1, 1, 2, 3, 5, 8
+  // After that, every value is the sum of the two values preceding it
+  // attn: zero-indexing
+
+
 
 if (require.main === module) {
   // add your own tests in here
